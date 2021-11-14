@@ -1,0 +1,12 @@
+<div id="wrapper">
+    <div *ngFor="let door of doors" class="door">
+      <div id="button-wrapper">
+        <button mat-button id="lock-button" (click)="onLockDoorBtnClick(door)">Lock door</button>
+        <button mat-button id="unlock-button" (click)="onUnlockDoorBtnClick(door)">Unlock door</button>
+      </div>
+      <div id="door-state">
+        <p *ngIf="isDoorLocked(door)" class="door-state-msg">Door is locked</p>
+        <p *ngIf="!isDoorLocked(door)" class="door-state-msg">Door is unlocked</p>
+      </div>
+    </div>
+  </div>
